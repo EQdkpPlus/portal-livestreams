@@ -74,9 +74,9 @@ class livestreams_portal extends portal_generic {
 				
 			function twitchStreamComplete(streamName, resp) {				
 	            if (resp.responseJSON.stream != null) {
-	               $("." + streamName + "_status").html("<i class=\"eqdkp-icon-offline blink_me\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('online')).'");
+	               $("." + streamName + "_status").html("<i class=\"eqdkp-icon-offline blink_me\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('ls_online')).'");
 	            } else {
-	                $("." + streamName + "_status").html("<i class=\"fa fa-close\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('offline')).'");
+	                $("." + streamName + "_status").html("<i class=\"fa fa-close\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('ls_offline')).'");
 	            }
 	        }
 				
@@ -95,9 +95,9 @@ class livestreams_portal extends portal_generic {
 				
 			function twitchStreamComplete(streamName, resp) {				
 	            if (resp.responseJSON.stream != null) {
-	               $("." + streamName + "_status").html("<i class=\"eqdkp-icon-offline blink_me\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('online')).'");
+	               $("." + streamName + "_status").html("<i class=\"eqdkp-icon-offline blink_me\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('ls_online')).'");
 	            } else {
-	                $("." + streamName + "_status").html("<i class=\"fa fa-close\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('offline')).'");
+	                $("." + streamName + "_status").html("<i class=\"fa fa-close\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('ls_offline')).'");
 	            }
 	        }
 				

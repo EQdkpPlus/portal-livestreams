@@ -27,5 +27,8 @@ $lang = array(
 	'livestreams'						=> 'Livestreams',
 	'livestreams_name'					=> 'Livestreams',
 	'livestreams_desc'					=> 'Listet die Livestreams der Benutzer auf und zeigt deren Status an',
+		
+	'ls_offline'						=> 'Offline',
+	'ls_online'							=> 'Online',
 );
 ?>
