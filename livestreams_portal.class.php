@@ -54,6 +54,56 @@ class livestreams_portal extends portal_generic {
 		
 		return $this->settings;
 	}
+	
+	public static function install($child=false) {
+		$intTwitchFieldID = register('pdh')->get('user_profilefields', 'field_by_name', array('twitch'));
+		$intHitboxFieldID = register('pdh')->get('user_profilefields', 'field_by_name', array('hitbox'));
+		
+		//Create Twitch Profilefield
+		if(!$intTwitchFieldID){
+			$arrOptions = array(
+				'name' 			=> 'Twitch',
+				'lang_var'		=> '',
+				'type' 			=> 'text',
+				'length'		=> 30,
+				'minlength' 	=> 3,
+				'validation'	=> '[\w_\.]+',
+				'required' 		=> 0,
+				'show_on_registration' => 0,
+				'enabled'		=> 1,
+				'is_contact'	=> 1,
+				'contact_url' 	=> 'http://www.twitch.tv/%s',
+				'icon_or_image' => 'fa-twitch',
+				'bridge_field'	=> null,
+			);
+			
+			register('pdh')->put('user_profilefields', 'insert_field', array($arrOptions, array()));
+		}
+		
+		//Create Hitbox Profilefield
+		if(!$intHitboxFieldID) {
+			$arrOptions = array(
+					'name' 			=> 'Hitbox',
+					'lang_var'		=> '',
+					'type' 			=> 'text',
+					'length'		=> 30,
+					'minlength' 	=> 3,
+					'validation'	=> '[\w_\.]+',
+					'required' 		=> 0,
+					'show_on_registration' => 0,
+					'enabled'		=> 1,
+					'is_contact'	=> 1,
+					'contact_url' 	=> 'http://www.hitbox.tv/%s',
+					'icon_or_image' => '',
+					'bridge_field'	=> null,
+			);
+			
+			register('pdh')->put('user_profilefields', 'insert_field', array($arrOptions, array()));
+			
+		}
+		
+		register('pdh')->process_hook_queue();
+	}
 
 	public function output() {
 		$arrUserIDs = $this->pdh->sort($this->pdh->get('user', 'id_list'), 'user', 'name', 'asc');
