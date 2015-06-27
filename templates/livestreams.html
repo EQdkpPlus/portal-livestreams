@@ -3,7 +3,7 @@
 	<tr>
 		<td><a href="{ls_user_row.USERLINK}">{ls_user_row.USERNAME}</a></td>
 		<td>{ls_user_row.STREAM_NAME}</td>
-		<td width="30" class="nowrap"><a href="{ls_user_row.STREAM_LINK}"><div class="ls_{ls_user_row.STREAM_TYPE} {ls_user_row.STREAM_USERNAME}_status" data-streamname="{ls_user_row.STREAM_USERNAME}"><i class="fa fa-spinner fa-spin"></i></div></a></td>
+		<td width="30" class="nowrap"><a href="{ls_user_row.STREAM_LINK}"><div class="ls_status {ls_user_row.STREAM_TYPE}_{ls_user_row.STREAM_USERNAME}" data-streamname="{ls_user_row.STREAM_USERNAME}" data-streamtype="{ls_user_row.STREAM_TYPE}"><i class="fa fa-spinner fa-spin"></i></div></a></td>
 	</tr>
 	<!-- END ls_user_row -->
 </table>
