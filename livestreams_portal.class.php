@@ -198,7 +198,7 @@ class livestreams_portal extends portal_generic {
 		
 		foreach($arrUserIDs as $intUserID){
 			
-			$strTwitch = $this->pdh->get('user', 'profilefield_by_name', array($intUserID, 'twitch'));
+			$strTwitch = $this->pdh->get('user', 'profilefield_by_name', array($intUserID, 'twitch', false, true));
 			if($strTwitch && $strTwitch != ""){
 				
 				$strUsername = $this->pdh->get('user', 'name', array($intUserID));
@@ -213,7 +213,7 @@ class livestreams_portal extends portal_generic {
 				));
 			}
 			
-			$strHitbox = $this->pdh->get('user', 'profilefield_by_name', array($intUserID, 'hitbox'));
+			$strHitbox = $this->pdh->get('user', 'profilefield_by_name', array($intUserID, 'hitbox', false, true));
 			if($strHitbox && strlen($strHitbox)){
 				
 				$strUsername = $this->pdh->get('user', 'name', array($intUserID));
