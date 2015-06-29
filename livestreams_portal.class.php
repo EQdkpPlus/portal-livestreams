@@ -64,7 +64,7 @@ class livestreams_portal extends portal_generic {
 			$arrOptions = array(
 				'name' 			=> 'Twitch',
 				'lang_var'		=> '',
-				'type' 			=> 'text',
+				'type' 			=> 'link',
 				'length'		=> 30,
 				'minlength' 	=> 3,
 				'validation'	=> '[\w_\.]+',
@@ -85,7 +85,7 @@ class livestreams_portal extends portal_generic {
 			$arrOptions = array(
 					'name' 			=> 'Hitbox',
 					'lang_var'		=> '',
-					'type' 			=> 'text',
+					'type' 			=> 'link',
 					'length'		=> 30,
 					'minlength' 	=> 3,
 					'validation'	=> '[\w_\.]+',
@@ -199,6 +199,7 @@ class livestreams_portal extends portal_generic {
 		foreach($arrUserIDs as $intUserID){
 			
 			$strTwitch = $this->pdh->get('user', 'profilefield_by_name', array($intUserID, 'twitch', false, true));
+			
 			if($strTwitch && $strTwitch != ""){
 				
 				$strUsername = $this->pdh->get('user', 'name', array($intUserID));
