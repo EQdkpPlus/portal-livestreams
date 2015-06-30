@@ -209,7 +209,7 @@ class livestreams_portal extends portal_generic {
 					'USERLINK' 		=> $this->routing->build('user', $strUsername, 'u'.$intUserID),
 					'STREAM_TYPE'	=> 'twitch',
 					'STREAM_NAME'	=> '<i class="fa fa-twitch" title="Twitch"></i>',
-					'STREAM_LINK'	=> utf8_strtolower($strTwitch),
+					'STREAM_LINK'	=> 'http://www.twitch.tv/'.str_replace('http://www.twitch.tv/', '', sanitize(utf8_strtolower($strTwitch))),
 					'STREAM_USERNAME' => str_replace('http://www.twitch.tv/', '', sanitize(utf8_strtolower($strTwitch))),
 				));
 			}
@@ -224,7 +224,7 @@ class livestreams_portal extends portal_generic {
 					'USERLINK' 		=> $this->routing->build('user', $strUsername, 'u'.$intUserID),
 					'STREAM_TYPE'	=> 'hb',
 					'STREAM_NAME'	=> 'Hitbox',
-					'STREAM_LINK'	=> utf8_strtolower($strHitbox),
+					'STREAM_LINK'	=>  'http://www.hitbox.tv/'.str_replace('http://www.hitbox.tv/', '', sanitize(utf8_strtolower($strHitbox))),
 					'STREAM_USERNAME' => str_replace('http://www.hitbox.tv/', '', sanitize(utf8_strtolower($strHitbox))),
 				));
 			}
