@@ -3,7 +3,7 @@
  *	Package:	Livestreams Portal Module
  *	Link:		http://eqdkp-plus.eu
  *
- *	Copyright (C) 2006-2015 EQdkp-Plus Developer Team
+ *	Copyright (C) 2006-2016 EQdkp-Plus Developer Team
  *
  *	This program is free software: you can redistribute it and/or modify
  *	it under the terms of the GNU Affero General Public License as published
@@ -126,7 +126,7 @@ class livestreams_portal extends portal_generic {
 			
 			function twitchStreamCheck(streamName){
 				$.ajax({
-					url: "https://api.twitch.tv/kraken/streams/" + streamName,
+					url: "https://api.twitch.tv/kraken/streams/" + streamName + "?client_id=gowgvdwzmwos2ghhess9aqjoex5w5hn",
 					dataType: "jsonp",
 					type: "get",
 					complete: function(resp, textStatus){
