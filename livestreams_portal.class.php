@@ -152,7 +152,7 @@ class livestreams_portal extends portal_generic {
 			
 			function lsStreamResponse(streamName, streamType, streamStatus){
 				if(streamStatus){
-					$(".ls_status." + streamType + "_" + streamName).html("<i class=\"eqdkp-icon-offline blink_me\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('ls_online')).'");
+					$(".ls_status." + streamType + "_" + streamName).html("<i class=\"eqdkp-icon-online blink_me\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('ls_online')).'");
 				}else{
 					$(".ls_status." + streamType + "_" + streamName).html("<i class=\"fa fa-close\" style=\"color:red;\"></i> '.$this->jquery->sanitize($this->user->lang('ls_offline')).'");
 				}
