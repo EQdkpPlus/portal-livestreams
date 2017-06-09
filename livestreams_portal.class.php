@@ -28,7 +28,7 @@ class livestreams_portal extends portal_generic {
 	protected static $path		= 'livestreams';
 	protected static $data		= array(
 		'name'			=> 'Livestreams Module',
-		'version'		=> '0.1.1',
+		'version'		=> '0.1.2',
 		'author'		=> 'GodMod',
 		'contact'		=> EQDKP_PROJECT_URL,
 		'icon'			=> 'fa-video-camera',
